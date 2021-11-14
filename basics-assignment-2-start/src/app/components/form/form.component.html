@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <div class="form">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" name="name" placeholder="Jhon M." [(ngModel)]="name">
+          <p class="text-danger" *ngIf="name==''">
+            Name is empty
+          </p>
+          <p class="text-success" *ngIf="name!=''">
+            Name is <strong>{{name}}</strong>
+          </p>
+          <br>
+          <button class="btn btn-primary" (click)="submit()" [disabled]='name==""'>Send</button> &nbsp;
+          <button class="btn btn-warning" (click)="reset()" [disabled]='name==""'>Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
